@@ -6,13 +6,13 @@ var app = express();
 app.use(morgan('combined'));
 var articles=
 {
-    'article1': 
+    'article-1': 
     {
         title:'article1',
         date: 'sep  5',
         content: 'hey, this is myfirst webpage',
     },
-    'article2' :
+    'article-2' :
     {
         title:'article2',
         date: 'sep  6',
@@ -23,8 +23,7 @@ var articles=
 app.get(':/articlename', function (req, res) {
   res.send(createTemplate(articles[articlename]))
 });
-app.get('/article1', function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
