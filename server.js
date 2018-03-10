@@ -11,7 +11,9 @@ var article1=
         date: 'sep  5',
         content: 'hey, this is myfirst webpage',
     };
-    
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 
 app.get('article1', function (req, res) {
   res.send(createTemplate(article1));
