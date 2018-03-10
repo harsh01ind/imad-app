@@ -21,14 +21,12 @@ var articles=
 };
 
 app.get('article1', function (req, res) {
-  res.send(createTemplate(articles[article1]))
-});
-
+  res.send(createTemplate(articles[article1]));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-f
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
