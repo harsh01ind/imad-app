@@ -4,24 +4,17 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articles=
-{
-    'article1': 
+
+var article1= 
     {
         title:'article1',
         date: 'sep  5',
         content: 'hey, this is myfirst webpage',
-    },
-    'article2' :
-    {
-        title:'article2',
-        date: 'sep  6',
-        content: 'hey, this is second webpage'
-    }
-};
+    };
+    
 
 app.get('article1', function (req, res) {
-  res.send(createTemplate(articles[article1]));
+  res.send(createTemplate(article1));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
@@ -54,7 +47,7 @@ function createTemplate(data){
 </html>
 `;
 
-return htmlTemplate;
+    return htmlTemplate;
 }
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
