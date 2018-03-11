@@ -2,8 +2,9 @@ alert('this is my first web page');
 
 
 var submit=document.getElementById('submit');
+var nameInput=document.getElementById('input');
 submit.onclick= function(){
-    var nameInput=document.getElementById('input');
+    
     var name=nameInput.value;
     var request=new XMLHttpRequest();
    
