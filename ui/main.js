@@ -18,7 +18,7 @@ submit.onclick= function(){
         var ul= document.getElemnetById('list');
         ul.innerHTML=list;
     };
-     request.open('GET', 'http://harshnyk190398.imad.hasura-app.io/hello?hello'+name,true);
+     request.open('GET', 'http://harshnyk190398.imad.hasura-app.io/hello?name='+name,true);
     request.send(null);
 };
     
